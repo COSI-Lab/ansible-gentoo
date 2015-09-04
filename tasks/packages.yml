@@ -3,5 +3,3 @@
   with_items:
     - name: iproute2
       creates: /mnt/gentoo/bin/ip
-    - name: vim
-      creates: /mnt/gentoo/usr/bin/vim
