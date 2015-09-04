@@ -5,16 +5,11 @@
       creates: /mnt/gentoo/usr/bin/eix
     - name: syslog-ng
       creates: /mnt/gentoo/usr/sbin/syslog-ng
-    - name: cronie
-      creates: /mnt/gentoo/etc/init.d/cronie
     - name: grub
       creates: /mnt/gentoo/usr/sbin/grub2-install
 
 - name: Add syslog-ng to Default Run Configuration
   command: chroot /mnt/gentoo bash -c 'rc-update add syslog-ng default'
-
-- name: Add cronie to Default Run Configuration
-  command: chroot /mnt/gentoo bash -c 'rc-update add cronie default'
 
 - name: Remount /dev to get /dev/mapper visible
   command: mount --rbind /dev /mnt/gentoo/dev
