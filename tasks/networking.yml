@@ -12,7 +12,7 @@
 
 
 - name: Create root .ssh Directory
-  command: mkdir -p /mnt/gentoo/root/.ssh && chmod 700 /mnt/gentoo/root/.ssh && chmod 700 /mnt/gentoo/root/.ssh
+  command: bash -c "mkdir -p /mnt/gentoo/root/.ssh && chmod 700 /mnt/gentoo/root/.ssh && chmod 700 /mnt/gentoo/root/.ssh"
 
 - name: Configure Root Authorized Key
   authorized_key: user=root
